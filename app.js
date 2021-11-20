@@ -14,11 +14,43 @@ function computerplay() {
 for(i=0; i < 10; i++) {
 }
 
+//Event listeners for the 3 options RPS
+    let userchoice = ''
+
+    const btnRock = document.querySelector('.rock__btn')
+    btnRock.addEventListener('click', () => {
+        userchoice = "rock"
+    })
+
+    const btnPaper = document.querySelector('.paper__btn')
+    btnPaper.addEventListener('click', () => {
+        userchoice = "paper"
+    })
+
+    const btnScissors = document.querySelector('.scissors__btn')
+    btnScissors.addEventListener('click', () => {
+        userchoice = "scissors"
+    })
+
+//Play Button that calls play() and returns text fed into DIV with the result
+const resultDiv = document.querySelector('.results')
+const playDiv = document.createElement('div');
+
+const playBtn = document.querySelector('.playBtn');
+playBtn.addEventListener('click', () => {
+    playDiv.textContent = play(userchoice)
+    resultDiv.appendChild(playDiv)
+})
+    
+    
 
 //Plays one round of the game
-function play() {
+function play(userchoice) {
+    
+    
+
     let choice = computerplay();
-    let userchoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
+    
     let message = ""
     if(choice === "rock" && userchoice === 'paper') {
         return  message = `You Win! You chose ${userchoice} and the machine picked ${choice}`
@@ -70,7 +102,7 @@ function game(){
         console.log("The Machine beat you!")
 
     }
-    
+    //Asks the user if they wish to play another round, or exit
     let again = prompt("Would you like to play again? Y / N?")
     if (again.toLowerCase() === "y"){
         console.clear();
@@ -80,4 +112,5 @@ function game(){
         console.log('GOODBYE THEN')
     }
 }
-game()
+
+

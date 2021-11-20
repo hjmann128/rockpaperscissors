@@ -1,0 +1,79 @@
+h1 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+h2 {
+    text-align: center;
+    margin: 50px;
+}
+
+.card__holder {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin: 100px;
+}
+
+.card__holder button:hover{
+ border: #119EF8 solid;
+}
+
+
+.rock__btn {
+    background-image: url("/Limestone-060-RD010-C-SH_by22j3.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+
+}
+
+.paper__btn {
+    background-image: url("/paper.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+}
+
+.scissors__btn {
+    background-image: url("/siccors.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+}
+
+.playBtn {
+    height: 50px;
+    width: 100px;
+    border-radius: 5%;
+    background-color: #119EF8;
+    color: white;
+    font-size: 20px;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    margin: 75px;
+    font-size: 32px;
+    
+}
+
+.score {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px;
+    font-size: 32px;
+}
